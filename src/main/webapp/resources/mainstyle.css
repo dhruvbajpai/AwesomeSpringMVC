@@ -1,0 +1,80 @@
+
+
+.lim
+{
+	background-color: white;
+	text-align: center;
+	
+	
+}
+
+.header
+{
+	height:100px;
+	width :auto;
+	margin:auto;
+	padding-left:5px;
+	padding-top:8px;
+	background-color:#d8cfdc;
+	
+	
+}
+#disHead
+{
+	
+	margin-left: 10px;
+}
+#friendlist
+{
+	height: 300px;
+	background-color:#FFFBFE;
+}
+#locationview
+{
+	/* width: 25%;
+	float:right;
+	float: */
+	height: 300px;
+	background-color:#FCECC9;
+	cursor:crosshair;
+	
+}
+#tagline
+{
+	padding-left:5px;
+	font-weight: bold;
+	
+}
+#map {
+	/* width: 50%; */
+	height: 350px;
+	float: left;
+}
+/* #first
+{
+	width:50%:
+	height:600px;
+	background-color: olive;
+} */
+#blog
+{
+	/* height: 300px; */
+	height:350px;
+	/* width:50%; */
+	background-color: #CCFCCB;
+	float:right;
+	
+	
+}
+#second
+{
+    
+}
+body{
+    margin:0px;
+    background:#ffffff;
+}
+
+.maprow{
+	height: 500px;
+}

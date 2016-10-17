@@ -1,0 +1,84 @@
+body {
+	  /* background-image: url(back_image.jpg); 
+	background-repeat: no-repeat;   */
+}
+
+p {
+	color: white;
+}
+.mtop
+{
+	margin-top: 40px;
+}
+.body_container {
+	
+}
+.rheight
+{
+    height: 600px;
+}
+h4 {
+	color: lime;
+}
+
+h3 {
+	color: red;
+}
+
+p {
+	color: green;
+}
+
+form {
+	
+}
+.register_container
+{
+	width :450px;
+	background-color : grey;
+	float:left;
+	margin :150px;
+	margin-top: 50px; 
+}
+.login_container {
+	width: 250px;
+	float:left;
+	
+	 margin: 250px;
+	margin-top: 100px ;
+}
+h6
+{
+	text-align: center;
+	margin:auto;
+	color: #ffffff;
+	font:italic;
+}
+.header_div {
+	text-align:center;
+	width: 600px;
+	
+	margin: auto;
+	margin-top: 50px;
+}
+
+/* input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 4px solid #ccc;
+	box-sizing: border-box;
+	background: transparent;
+	color: #ffffff
+}
+
+input[type=submit], input[type=button] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: auto;
+	width: 100%;
+} */
