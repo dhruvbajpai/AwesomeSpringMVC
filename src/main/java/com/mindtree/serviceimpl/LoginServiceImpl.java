@@ -21,6 +21,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public void saveUser(User user) {
+		
 		// TODO Auto-generated method stub
 		//User user = new User(username, pass);
 		/*if(daoObject==null)
@@ -47,6 +48,12 @@ public class LoginServiceImpl implements LoginService {
 
 	public void setDaoObject(Dao daoObject) {
 		this.daoObject = daoObject;
+	}
+
+	@Override
+	public void addMessage(String message) {
+		// TODO Auto-generated method stub
+		daoObject.addMessage(message);
 	}
 	
 	

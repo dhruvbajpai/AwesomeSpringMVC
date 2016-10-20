@@ -34,6 +34,14 @@ public class LoginController {
 		return "New User Registered";
 	}
 	
+	@RequestMapping(value = "/addMessage", method = RequestMethod.POST)
+	@ResponseBody
+	public String addMessage(@RequestParam String message)
+	{
+		loginServiceImpl.addMessage(message);
+		return "Message Posted";
+	}
+	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	//@ResponseBody
 	public String handleLogin(@RequestParam String user, @RequestParam String pass) {

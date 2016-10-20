@@ -1,0 +1,5 @@
+projectKey=WebApp1:Webapp
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/WebApp1:Webapp
+ceTaskId=AVfSkFZE8MFJ5wsTEPFh
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVfSkFZE8MFJ5wsTEPFh

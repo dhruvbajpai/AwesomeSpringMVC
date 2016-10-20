@@ -66,10 +66,11 @@
 				<div class="row">
 					<div class="col s12 card-panel">
 						<div class="row">
-							<input class="col s8" type="text" placeholder="Type Here" id="chat">
+							<input class="col s8" type="text" placeholder="Type Here"
+								id="chat">
 							<div class="col s4">
 								<input class="waves-effect waves-light btn" type="button"
-									value="Send" id="send" style="padding: 10px;margin-top:10px;">
+									value="Send" id="send" style="padding: 10px; margin-top: 10px;">
 							</div>
 						</div>
 					</div>
@@ -88,6 +89,40 @@
 		$('#map').slideUp(1000).slideDown(1000);
 	</script>
 	<script type="text/javascript">
+		function postmessage(msg) {
+			 $.ajax({
+				url : "/Webapp/addMessage",
+				type : "POST",
+				dataType : "html",
+				data : /* JSON.stringify(regdata),*/ msg,
+			success : function(result) {
+				console.log(result);
+			//$("div").html(result);
+			}
+				}); 
+			/* console.log("b4");
+			var xmlHttp;
+			if (window.XMLHttpRequest) {
+				xmlHttp = new XMLHttpRequest();
+			} else {
+				alert("not supported");
+			}
+			//console.log("b4 open");
+			xmlHttp.open('POST', "/Webapp/addMessage", true);
+			xmlHttp.setRequestHeader('Accept', 'application/json');
+			xmlHttp.send(msg);
+			//console.log("after send");
+			xmlHttp.onreadystatechange = function() {
+				console.log("ready changed");
+				console.log(status)
+				if (this.readyState == 4 && this.status == 200) {
+					var str = xmlHttp.responseText;
+					console.log("ho gaya");
+				}
+				// Typical action to be performed when the document is ready:
+
+			} */
+		}
 		$(document)
 				.ready(
 						function() {
@@ -127,6 +162,11 @@
 																	"It's empty dudee.. :/?",
 																	2000);
 												}
+												Materialize.toast(chat, 2000);
+												var chdata = {
+													message : chat
+												};
+												postmessage(chdata);
 												//				 $("#msgs").append($("<li>").text());
 
 											});

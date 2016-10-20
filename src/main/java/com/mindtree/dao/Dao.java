@@ -1,4 +1,4 @@
-package com.mindtree.dao;
+	package com.mindtree.dao;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.mindtree.dto.Message;
 import com.mindtree.dto.Point;
 import com.mindtree.dto.User;
 
@@ -71,6 +72,24 @@ public class Dao {
 		}
 		return null;
 
+	}
+	public void addMessage(String message)
+	{
+		Session session = sessionFactory.openSession();
+		Message m = new Message();
+		m.setMessage(message);
+		try{
+			session.beginTransaction();
+			session.save(m);
+			session.getTransaction().commit();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally{
+			session.close();
+		}
+		
 	}
 
 }

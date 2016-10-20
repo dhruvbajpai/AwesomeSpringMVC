@@ -27,6 +27,7 @@
 		<!-- All the entity classes will 	 here -->
 		<mapping class="com.mindtree.dto.User"></mapping>
 		<mapping class="com.mindtree.dto.Point"></mapping>
+		<mapping class="com.mindtree.dto.Message"></mapping>
 		<!-- List of XML mapping files -->
 		<!--<mapping resource="Employee.hbm.xml" /> -->
 

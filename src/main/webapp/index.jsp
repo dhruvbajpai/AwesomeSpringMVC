@@ -159,7 +159,8 @@
 		jQuery(document).ready(
 				function($) {
 
-					$("#register").click(function(event) {
+					$("#register").click(
+							function(event) {
 								if (validateForm() == true) {
 
 									var user = $('#ruser').val();
@@ -170,21 +171,21 @@
 										userName : user,
 										password : pass
 									}
-									callmyajax(user,pass,regdata);
-								}
-								else{
+									//alert(JSON.stringify(regdata));
+									callmyajax(user, pass, regdata);
+								} else {
 									console.log("Whoops error");
 								}
 							});
 
 				});
-		
-		function callmyajax(user,pass,regdata){
+
+		function callmyajax(user, pass, regdata) {
 			$.ajax({
-				url : "http://localhost:8080/Webapp/tester",
-				type:"GET",
-				dataType:"html",
-				data : /* JSON.stringify(regdata) */regdata,
+				url : "/Webapp/registerUser",
+				type : "POST",
+				dataType : "html",
+				data : /* JSON.stringify(regdata), */regdata,
 				success : function(result) {
 					console.log(result);
 					//$("div").html(result);
@@ -192,9 +193,9 @@
 			});
 		}
 		/* headers: { 
-	      'Accept': 'application/json',
-	      'Content-Type': 'application/json' 
-	  }  */
+		  'Accept': 'application/json',
+		  'Content-Type': 'application/json' 
+		}  */
 	</script>
 </body>
 </html>
